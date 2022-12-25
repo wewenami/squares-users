@@ -1,0 +1,14 @@
+output   = "src/generated/sqlBoiler"
+wipe     = true
+no-tests = true
+add-enum-types = true
+
+[psql]
+dbname = "usersdb"
+host   = "localhost"
+port   = 5434
+user   = "usersdbuser"
+pass   = "usersdbpass"
+schema = "public"
+sslmode = "disable"
+blacklist = ["schema_migrations", "migrations"]

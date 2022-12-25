@@ -1,0 +1,12 @@
+postgres:
+    image: postgres:13.3
+    container_name: squares.kz_postgresql
+    restart: always
+    environment:
+      POSTGRES_DB: "usersdb"
+      POSTGRES_USER: "usersdbuser"
+      POSTGRES_PASSWORD: "usersdbpass"
+    ports:
+      - "5434:5432"
+    volumes:
+      - ${PWD}/docker/postgresql/data:/var/lib/postgresql/data1
